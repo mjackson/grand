@@ -53,12 +53,16 @@ exports.__defineGetter__('wordsByLength', function () {
   return _wordsByLength;
 });
 
-exports.pick = function (array) {
-  return array[exports.number(array.length)];
+exports.number = function (exclusiveMax) {
+  return Math.random() * exclusiveMax;
 };
 
-exports.number = function (exclusiveMax) {
-  return Math.floor(Math.random() * exclusiveMax);
+exports.integer = function (exclusiveMax) {
+  return exports.number(exclusiveMax) | 0;
+};
+
+exports.pick = function (array) {
+  return array[exports.integer(array.length)];
 };
 
 exports.letter = function () {
@@ -70,16 +74,16 @@ exports.wordChar = function () {
 };
 
 exports.word = function (length) {
-  length = length || Math.max(2, exports.number(12));
+  length = length || Math.max(2, exports.integer(12));
   return exports.pick(exports.wordsByLength[length]);
 };
 
-exports.sentence = function (length) {
-  length = Math.max(3, length || exports.number(12));
+exports.sentence = function (maxWords) {
+  maxWords = Math.max(3, maxWords || exports.integer(12));
 
   var words = [];
-  for (var i = 0; i < length; i++) {
-    words.push(exports.word(exports.number(12)));
+  for (var i = 0; i < maxWords; i++) {
+    words.push(exports.word(exports.integer(12)));
   }
 
   return words.join(' ');
