@@ -1,0 +1,20 @@
+{
+  "name": "grand",
+  "version": "0.0.0",
+  "description": "Generate random data",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mjijackson/grand.git"
+  },
+  "keywords": [
+    "generate",
+    "random",
+    "data"
+  ],
+  "author": "Michael Jackson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mjijackson/grand/issues"
+  }
+}
