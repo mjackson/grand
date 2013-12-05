@@ -111,3 +111,16 @@ exports.name = function (gender) {
 exports.emailAddress = function () {
   return (exports.givenName() + '@' + exports.word() + '.com').toLowerCase();
 };
+
+var languages = require('./data/languages');
+
+exports.language = function(base) {
+  var choices = languages.regional;
+  if (base) {
+    choices = choices.filter(function(lang) {
+      return lang.split('-')[0] === base;
+    });
+  }
+
+  return exports.pick(choices);
+};
