@@ -1,5 +1,5 @@
 /**
- * Fetch and output formatted language data used by fabricator.
+ * Fetch and output formatted language data used by grand.
  *
  * Language tags are presented according to RFC5646:
  *   http://www.inter-locale.com/ID/rfc5646.html
@@ -59,7 +59,7 @@ request.get(languageDataUrl, function(error, response, body) {
       'tags': languages
     };
 
-    // Output data structure  to STDOUT so it can be inspected or piped
+    // Output data structure to STDOUT so it can be inspected or piped
     process.stdout.write(JSON.stringify(structure, null, 2));
   });
 });
