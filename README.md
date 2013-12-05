@@ -17,4 +17,5 @@ grand.givenName(gender)       // A random given name for the given gender (optio
 grand.familyName()            // A random family name
 grand.name(gender)            // A random full name of the given gender (optional)
 grand.emailAddress()          // A random email address
+grand.timezone(continent)     // A random timezone on a continent (optional)
 ```

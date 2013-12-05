@@ -111,3 +111,16 @@ exports.name = function (gender) {
 exports.emailAddress = function () {
   return (exports.givenName() + '@' + exports.word() + '.com').toLowerCase();
 };
+
+var timezones = require('./data/timezones');
+
+exports.timezone = function(continent) {
+  var choices = timezones.names;
+  if (continent) {
+    choices = choices.filter(function(zone) {
+      return zone.split('/')[0] === continent;
+    });
+  }
+
+  return exports.pick(choices);
+};
