@@ -16,5 +16,8 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mjijackson/grand/issues"
+  },
+  "dependencies": {
+    "node-uuid": "~1.4.1"
   }
 }

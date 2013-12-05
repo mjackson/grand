@@ -61,6 +61,10 @@ exports.integer = function (exclusiveMax) {
   return exports.number(exclusiveMax) | 0;
 };
 
+var uuid = require('node-uuid');
+
+exports.uuid = uuid.v4;
+
 exports.pick = function (array) {
   return array[exports.integer(array.length)];
 };
