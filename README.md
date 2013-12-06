@@ -7,7 +7,6 @@ var grand = require('grand');
 
 grand.number(exclusiveMax)    // A random, positive number less than the exclusiveMax
 grand.integer(exclusiveMax)   // A random, positive integer less than the exclusiveMax
-grand.uuid()                  // A random uuid (v4) using node-uuid and accepting the v4 parameters (optional)
 grand.pick(array)             // A random item from the given array
 grand.letter()                // A random letter [A-Za-z]
 grand.wordChar()              // A random word character [A-Za-z0-9_]
@@ -20,3 +19,4 @@ grand.name(gender)            // A random full name of the given gender (optiona
 grand.emailAddress()          // A random email address
 grand.language(base)          // A random language and region for a given language (optional)
 grand.timezone(continent)     // A random timezone on a continent (optional)
+grand.uuid()                  // A random uuid (v4) using node-uuid and accepting the v4 parameters (optional)
