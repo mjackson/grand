@@ -5,8 +5,8 @@ grand is a [node.js](http://nodejs.org/) module for generating random data.
 ```js
 var grand = require('grand');
 
-grand.number(exclusiveMax)    // A random, positive number less than the exclusiveMax
-grand.integer(exclusiveMax)   // A random, positive integer less than the exclusiveMax
+grand.number(exclusiveMax)    // A random, positive number less than the exclusiveMax (optional)
+grand.integer(exclusiveMax)   // A random, positive integer less than the exclusiveMax (optional)
 grand.pick(array)             // A random item from the given array
 grand.letter()                // A random letter [A-Za-z]
 grand.wordChar()              // A random word character [A-Za-z0-9_]

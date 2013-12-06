@@ -54,7 +54,7 @@ exports.__defineGetter__('wordsByLength', function () {
 });
 
 exports.number = function (exclusiveMax) {
-  return Math.random() * exclusiveMax;
+  return Math.random() * (exclusiveMax || 1);
 };
 
 exports.integer = function (exclusiveMax) {
@@ -90,7 +90,7 @@ exports.sentence = function (maxWords) {
 };
 
 exports.gender = function () {
-  return Math.random() > 0.5 ? 'male' : 'female';
+  return exports.number() > 0.5 ? 'male' : 'female';
 };
 
 var names = require('./data/names');
