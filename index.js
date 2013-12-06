@@ -1,12 +1,6 @@
 var fs = require('fs');
 var path = require('path');
 
-var NUMBERS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
-var LOWER_LETTERS = 'abcdefghijklmnopqrstuvwxyz'.split('');
-var UPPER_LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
-var LETTERS = LOWER_LETTERS.concat(UPPER_LETTERS);
-var WORD_CHARS = [ '_' ].concat(NUMBERS).concat(LETTERS);
-
 // Requires the wordlist package on Linux.
 var possibleWordsFiles = [ '/usr/share/dict/words', '/usr/dict/words' ];
 
@@ -64,6 +58,12 @@ exports.integer = function (exclusiveMax) {
 exports.pick = function (array) {
   return array[exports.integer(array.length)];
 };
+
+var NUMBERS = '1234567890'.split('');
+var LOWER_LETTERS = 'abcdefghijklmnopqrstuvwxyz'.split('');
+var UPPER_LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+var LETTERS = LOWER_LETTERS.concat(UPPER_LETTERS);
+var WORD_CHARS = [ '_' ].concat(NUMBERS).concat(LETTERS);
 
 exports.letter = function () {
   return exports.pick(LETTERS);
