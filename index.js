@@ -114,11 +114,26 @@ exports.emailAddress = function () {
 
 var languages = require('./data/languages');
 
-exports.language = function(base) {
+exports.language = function (base) {
   var choices = languages.regional;
+
   if (base) {
-    choices = choices.filter(function(lang) {
+    choices = choices.filter(function (lang) {
       return lang.split('-')[0] === base;
+    });
+  }
+
+  return exports.pick(choices);
+};
+
+var timezones = require('./data/timezones');
+
+exports.timezone = function (continent) {
+  var choices = timezones.names;
+
+  if (continent) {
+    choices = choices.filter(function (zone) {
+      return zone.split('/')[0] === continent;
     });
   }
 

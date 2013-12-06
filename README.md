@@ -18,4 +18,4 @@ grand.familyName()            // A random family name
 grand.name(gender)            // A random full name of the given gender (optional)
 grand.emailAddress()          // A random email address
 grand.language(base)          // A random language and region for a given language (optional)
-```
+grand.timezone(continent)     // A random timezone on a continent (optional)
