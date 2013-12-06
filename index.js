@@ -139,3 +139,7 @@ exports.timezone = function (continent) {
 
   return exports.pick(choices);
 };
+
+var uuid = require('node-uuid');
+
+exports.uuid = uuid.v4;
