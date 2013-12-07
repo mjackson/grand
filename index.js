@@ -24,9 +24,9 @@ exports.__defineGetter__('wordsFile', function () {
 var _words;
 exports.__defineGetter__('words', function () {
   if (!_words) {
-    var nonLetter = /[^a-zA-Z]/;
+    var allLetters = /^[a-zA-Z]+$/;
     _words = fs.readFileSync(exports.wordsFile, 'utf8').split('\n').filter(function (word) {
-      return !nonLetter.test(word);
+      return allLetters.test(word);
     });
   }
 
