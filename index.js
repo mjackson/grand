@@ -38,8 +38,13 @@ exports.__defineGetter__('wordsByLength', function () {
   if (!_wordsByLength) {
     _wordsByLength = exports.words.reduce(function (memo, word) {
       var length = word.length;
-      if (!memo[length]) memo[length] = [];
-      memo[length].push(word);
+
+      if (memo[length]) {
+        memo[length].push(word);
+      } else {
+        memo[length] = [ word ];
+      }
+
       return memo;
     }, {});
   }
