@@ -80,7 +80,14 @@ exports.wordChar = function () {
 
 exports.word = function (length) {
   length = length || Math.max(2, exports.integer(12));
-  return exports.pick(exports.wordsByLength[length]);
+
+  var choices;
+  do {
+    choices = exports.wordsByLength[length];
+    length -= 1;
+  } while (!choices); // Make sure we have a valid length.
+
+  return exports.pick(choices);
 };
 
 exports.sentence = function (maxWords) {
