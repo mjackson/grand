@@ -126,7 +126,7 @@ exports.emailAddress = function () {
 
 var locales = require('./data/locales').locales;
 
-exports.language = function (region) {
+exports.locale = function (region) {
   var choices = locales.slice(0);
 
   if (region) {
