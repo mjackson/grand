@@ -29,8 +29,8 @@ request.get(LANGUAGE_DATA_URL, function (error, response, body) {
     var locales = [];
 
     languageData.forEach(function (data) {
-      var code = data['$'].type;
-      var territories = data['$'].territories || '';
+      var code = data.$.type;
+      var territories = data.$.territories || '';
 
       // Split the territories attribute into regions based on whitespace
       var regions = territories.split(/[\s\t\n]+/);

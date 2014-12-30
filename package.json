@@ -18,13 +18,17 @@
     "url": "https://github.com/mjijackson/grand/issues"
   },
   "devDependencies": {
-    "xml2js": "~0.4.0",
-    "request": "~2.28.0"
+    "expect": "^1.1.0",
+    "jshint": "^2.5.11",
+    "mocha": "^2.1.0",
+    "request": "~2.28.0",
+    "xml2js": "~0.4.0"
   },
   "dependencies": {
     "node-uuid": "~1.4.1"
   },
   "scripts": {
+    "test": "jshint . && mocha --reporter spec 'modules/**/__tests__/*-test.js'",
     "update-locales": "node scripts/print-locales.js > modules/data/locales.json",
     "update-timezones": "node scripts/print-timezones.js > modules/data/timezones.json"
   }

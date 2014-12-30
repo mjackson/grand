@@ -1,5 +1,4 @@
 var fs = require('fs');
-var path = require('path');
 
 // Requires the wordlist package on Linux.
 var possibleWordsFiles = [ '/usr/share/dict/words', '/usr/dict/words' ];

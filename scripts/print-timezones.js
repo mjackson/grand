@@ -1,3 +1,4 @@
+/* jshint -W002 */
 /**
  * Fetch and output formatted timezone data used by grand.
  *
