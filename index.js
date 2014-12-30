@@ -124,24 +124,24 @@ exports.emailAddress = function () {
   return (exports.givenName() + '@' + exports.word() + '.com').toLowerCase();
 };
 
-var languages = require('./data/languages');
+var locales = require('./data/locales').locales;
 
-exports.language = function (base) {
-  var choices = languages.regional;
+exports.language = function (region) {
+  var choices = locales.slice(0);
 
-  if (base) {
-    choices = choices.filter(function (lang) {
-      return lang.split('-')[0] === base;
+  if (region) {
+    choices = choices.filter(function (locale) {
+      return locale.split('-')[0] === region;
     });
   }
 
   return exports.pick(choices);
 };
 
-var timezones = require('./data/timezones');
+var timezones = require('./data/timezones').timezones;
 
 exports.timezone = function (continent) {
-  var choices = timezones.names;
+  var choices = timezones.slice(0);
 
   if (continent) {
     choices = choices.filter(function (zone) {

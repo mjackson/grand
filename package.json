@@ -23,5 +23,9 @@
   },
   "dependencies": {
     "node-uuid": "~1.4.1"
+  },
+  "scripts": {
+    "update-locales": "node scripts/print-locales.js > data/locales.json",
+    "update-timezones": "node scripts/print-timezones.js > data/timezones.json"
   }
 }
