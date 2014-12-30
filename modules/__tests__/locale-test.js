@@ -8,4 +8,3 @@ describe('grand.locale', function () {
     expect(LOCALES).toInclude(grand.locale());
   });
 });
-
