@@ -2,7 +2,7 @@
   "name": "grand",
   "version": "0.1.0",
   "description": "Generate random data",
-  "main": "index.js",
+  "main": "modules/grand.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/mjijackson/grand.git"
@@ -25,7 +25,7 @@
     "node-uuid": "~1.4.1"
   },
   "scripts": {
-    "update-locales": "node scripts/print-locales.js > data/locales.json",
-    "update-timezones": "node scripts/print-timezones.js > data/timezones.json"
+    "update-locales": "node scripts/print-locales.js > modules/data/locales.json",
+    "update-timezones": "node scripts/print-timezones.js > modules/data/timezones.json"
   }
 }
