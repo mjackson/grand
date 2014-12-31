@@ -1,4 +1,9 @@
-grand is a [node.js](http://nodejs.org/) module for generating random data.
+[![npm package](https://img.shields.io/npm/v/grand.svg?style=flat-square)](https://www.npmjs.org/package/grand)
+[![build status](https://img.shields.io/travis/mjackson/grand.svg?style=flat-square)](https://travis-ci.org/mjackson/grand)
+[![dependency status](https://img.shields.io/david/mjackson/grand.svg?style=flat-square)](https://david-dm.org/mjackson/grand)
+[![code climate](https://img.shields.io/codeclimate/github/mjackson/grand.svg?style=flat-square)](https://codeclimate.com/github/mjackson/grand)
+
+[grand](https://github.com/mjackson/grand) is a JavaScript module for generating random data.
 
 ### Usage
 
@@ -19,4 +24,25 @@ grand.name(gender)            // A random full name of the given gender (optiona
 grand.emailAddress()          // A random email address
 grand.locale(region)          // A random locale for a given region (optional)
 grand.timezone(continent)     // A random timezone on a continent (optional)
-grand.uuid()                  // A random uuid (v4) using node-uuid and accepting the v4 parameters (optional)
+```
+
+### Installation
+
+Using [npm](https://www.npmjs.org/):
+
+    $ npm install grand
+
+### Issues
+
+Please file issues on the [issue tracker on GitHub](https://github.com/mjackson/grand/issues).
+
+### Tests
+
+To run the tests in node:
+
+    $ npm install
+    $ npm test
+
+### License
+
+[MIT](http://opensource.org/licenses/MIT)
