@@ -58,7 +58,7 @@ function randomWordsByLength() {
 }
 
 function randomNumber(exclusiveMax) {
-  return Math.random() * (exclusiveMax || 1);
+  return Math.random() * (typeof exclusiveMax === 'number' ? exclusiveMax : 1);
 }
 
 function randomInteger(exclusiveMax) {
@@ -82,7 +82,7 @@ function randomWord(length) {
 
   var choices;
   do {
-    choices = randomWordsByLength[length];
+    choices = randomWordsByLength()[length];
     length -= 1;
   } while (!choices); // Make sure we have a valid length.
 
@@ -121,24 +121,24 @@ function randomEmailAddress(tld) {
   return (randomGivenName() + '@' + randomWord() + '.com').toLowerCase();
 }
 
-function randomLocale(region) {
+function randomLocale(language) {
   var choices = LOCALES.slice(0);
 
-  if (region) {
+  if (language) {
     choices = choices.filter(function (locale) {
-      return locale.split('-')[0] === region;
+      return locale.split('-')[0] === language;
     });
   }
 
   return randomArrayItem(choices);
 }
 
-function randomTimezone(continent) {
+function randomTimezone(region) {
   var choices = TIMEZONES.slice(0);
 
-  if (continent) {
+  if (region) {
     choices = choices.filter(function (zone) {
-      return zone.split('/')[0] === continent;
+      return zone.split('/')[0] === region;
     });
   }
 

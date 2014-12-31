@@ -7,4 +7,10 @@ describe('grand.timezone', function () {
   it('returns a random timezone', function () {
     expect(TIMEZONES).toInclude(grand.timezone());
   });
+
+  describe('when given a region', function () {
+    it('returns a timezone in that region', function () {
+      expect(grand.timezone('America')).toMatch(/^America\//);
+    });
+  });
 });
