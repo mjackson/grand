@@ -2,7 +2,7 @@
   "name": "grand",
   "version": "1.0.0",
   "description": "Generate random data",
-  "main": "modules/grand.js",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/mjackson/grand.git"
@@ -25,9 +25,9 @@
     "xml2js": "^0.4.0"
   },
   "scripts": {
-    "test": "jshint . && mocha --reporter spec 'modules/**/__tests__/*-test.js'",
-    "update-locales": "node scripts/print-locales.js > modules/data/locales.json",
-    "update-timezones": "node scripts/print-timezones.js > modules/data/timezones.json"
+    "test": "jshint . && mocha --reporter spec 'tests/*-test.js'",
+    "update-locales": "node scripts/print-locales.js > data/locales.json",
+    "update-timezones": "node scripts/print-timezones.js > data/timezones.json"
   },
   "browser": {
     "fs": false

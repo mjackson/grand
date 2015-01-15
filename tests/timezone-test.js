@@ -1,5 +1,5 @@
 var expect = require('expect');
-var grand = require('../grand');
+var grand = require('../index');
 
 var TIMEZONES = require('../data/timezones').timezones;
 

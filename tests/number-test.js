@@ -1,5 +1,5 @@
 var expect = require('expect');
-var grand = require('../grand');
+var grand = require('../index');
 
 describe('grand.number', function () {
   it('returns a number less than 1', function () {
