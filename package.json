@@ -1,6 +1,6 @@
 {
   "name": "grand",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Generate random data",
   "main": "index.js",
   "repository": {
